@@ -4016,6 +4016,10 @@ Prefab:
       propertyPath: m_ApplyRootMotion
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100058, guid: 77a008ad151118748a8b06130acec63b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77a008ad151118748a8b06130acec63b, type: 3}
   m_IsPrefabAsset: 0
@@ -5284,7 +5288,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 1
   m_Height: 1
   m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
@@ -6601,7 +6605,7 @@ Prefab:
       objectReference: {fileID: 9100000, guid: e2f1f562b684d7140be0bcfe5b39ec7e, type: 2}
     - target: {fileID: 100074, guid: 5d6f6b7fb03632140997e03643450e65, type: 3}
       propertyPath: m_TagString
-      value: midtermcharacter
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d6f6b7fb03632140997e03643450e65, type: 3}

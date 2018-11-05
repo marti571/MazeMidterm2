@@ -35,7 +35,7 @@ public class CoinCollector : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "midtermcharacter")
+        if (other.gameObject.tag == "Player")
         {
             aScorce.clip = coin; //once the coin is destroyed, make coin sound
             aScorce.Play();
