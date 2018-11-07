@@ -20,7 +20,7 @@ public class ThirdCharacterCamera : MonoBehaviour {
 	{
 		if(target == null)
 		{
-			Debug.LogWarning("Missing target ref !", this);
+			//Debug.LogWarning("Missing target ref !", this);
 			return;
 		}
 		if(offsetPositionspace == Space.Self)

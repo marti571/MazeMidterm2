@@ -17,6 +17,8 @@ public class CharacterBehavior : MonoBehaviour {
 		anim.SetFloat("direction", Input.GetAxis("Horizontal"));
 		//Punching Animation
 		Punching();
+		//Kicking animation
+		Kicking();
 	}	
 	void Punching() {
 		if(Input.GetButtonDown("Fire1"))
@@ -26,6 +28,16 @@ public class CharacterBehavior : MonoBehaviour {
 		if(Input.GetButtonUp("Fire1") && PlayerClicked == true)
 		{
 			anim.SetTrigger("Punch");
+		}
+	}
+	void Kicking() {
+		if(Input.GetKeyDown("space"))
+		{
+			PlayerClicked = true;
+		}
+		if(Input.GetKeyUp("space") && PlayerClicked == true)
+		{
+			anim.SetTrigger("Kick");
 		}
 	}
 }
