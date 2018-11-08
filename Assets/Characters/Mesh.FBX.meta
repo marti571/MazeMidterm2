@@ -145,7 +145,17 @@ ModelImporter:
     13700000: Body_mesh
     13700002: Pants_mesh
     13700004: Teeth_mesh
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default
+    second: {fileID: 2100000, guid: 40afb69e6251ab34190900586baae7fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Default
+    second: {fileID: 2100000, guid: 10d7f78f043d59249b0c40dc374ea3f3, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -181,8 +191,8 @@ ModelImporter:
     addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
