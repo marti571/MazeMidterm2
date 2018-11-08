@@ -53,6 +53,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Animations\ThirdPersonCharacter\Scripts\AICharacterControl.cs" />
+     <Compile Include="Assets\Animations\ThirdPersonCharacter\Scripts\ThirdPersonCharacter.cs" />
+     <Compile Include="Assets\Animations\ThirdPersonCharacter\Scripts\ThirdPersonUserControl.cs" />
      <Compile Include="Assets\Menu.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
@@ -62,11 +65,13 @@
      <Compile Include="Assets\SampleScenes\Scripts\CoinCollector.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\GameManagerScript.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
+     <Compile Include="Assets\SampleScenes\Scripts\MinionBehavior.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\SpinningCoin.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\ThirdCharacterCamera.cs" />
+     <None Include="Assets\Animations\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
      <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/Mariana/Documents/GitHub/MazeMidterm2/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
