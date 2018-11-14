@@ -65,14 +65,15 @@
      <Compile Include="Assets\Scripts\GameManagerScript.cs" />
      <Compile Include="Assets\Scripts\LevelReset.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
+     <Compile Include="Assets\Scripts\MinionAttack.cs" />
      <Compile Include="Assets\Scripts\MinionBehavior.cs" />
+     <Compile Include="Assets\Scripts\MinionHealth.cs" />
      <Compile Include="Assets\Scripts\ParticleSceneControls.cs" />
      <Compile Include="Assets\Scripts\PlaceTargetWithMouse.cs" />
      <Compile Include="Assets\Scripts\SlowMoButton.cs" />
      <Compile Include="Assets\Scripts\SpinningCoin.cs" />
      <Compile Include="Assets\Scripts\ThirdCharacterCamera.cs" />
      <Compile Include="Assets\Scripts\WarriorHealth.cs" />
-     <Compile Include="Assets\WarriorHealth.cs" />
      <None Include="Assets\Animations\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
      <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
  <Reference Include="UnityEditor.StandardEvents">

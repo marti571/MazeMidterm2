@@ -10,9 +10,10 @@ public class WarriorHealth : MonoBehaviour {
 	public int maxHealth = 100;
 	public int currentHealth;
 	public Slider healthSlider;
-	//public Image damageImage = GameObject.Find("damage").GetComponent<Image>();
-	//Color newColor = damageImage.color;
+	public Color32 flashcolor = new Color(1f,0f,0f,0.1f);
 
+	public Image damageImage;
+	
 
 	//add a death audio public AudioClip deathClip;
 	public float flashSpeed = 5f;
@@ -37,13 +38,15 @@ public class WarriorHealth : MonoBehaviour {
 		//if the player has just been damaged
 		if(damaged)
 		{
+			damageImage.GetComponent<Image>().color = flashcolor;
 			//set the color of damageImage
-			//damageImage.color = newColor;
+			//damageImage.color = flashcolor;
 		}
 		else
 		{
 			//back to clear
 			//damageImage.color = Color.Lerp (damageImage.Color, Color.clear, flashSpeed * Time.deltaTime);
+			damageImage.GetComponent<Image>().color = Color.Lerp (damageImage.GetComponent<Image>().color, Color.clear, flashSpeed * Time.deltaTime);
 		}
 		//reset damage flag
 		damaged = false;
