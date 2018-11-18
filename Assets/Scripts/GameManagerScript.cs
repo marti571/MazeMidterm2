@@ -10,6 +10,8 @@ public class GameManagerScript : MonoBehaviour {
     public int max_coins = 0;
 
     public GameObject door;
+    public GameObject riddle;
+    public GameObject riddleMessage;
     public GameObject winText;
     public float resetDelay;
 
@@ -30,21 +32,22 @@ public class GameManagerScript : MonoBehaviour {
     public void UpdateUI()
     {
         if(cur_coins > 0){
-            coinsLeft.text = "Coins Left : " + cur_coins.ToString() + "/" + max_coins.ToString();
+            coinsLeft.text = "Coins : " + cur_coins.ToString() + "/" + max_coins.ToString();
         }
         else if(cur_coins <= 0)
         {
-            //door.SetActive(true);
-            winText.SetActive(true);
-            Time.timeScale = 0f;
-            Invoke("Reset",resetDelay);
-
+            door.SetActive(true);
+            riddleMessage.SetActive(true);
+            //riddle.SetActive(true);
+           
 
         }
     }
-    public void Reset()
+    public void GetRiddle()
     {
-        Time.timeScale = 0f;
-        SceneManager.LoadScene("Menu");
+        riddleMessage.SetActive(false);
+        riddle.SetActive(true);
     }
+
+
 }
