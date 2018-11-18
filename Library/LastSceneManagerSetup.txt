@@ -1,4 +1,12 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/level3.unity
+=======
+<<<<<<< HEAD
+- path: Assets/level1.unity
+=======
+- path: Assets/level3.unity
+>>>>>>> master
+>>>>>>> Riddle
   isLoaded: 1
   isActive: 1

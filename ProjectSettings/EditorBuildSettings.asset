@@ -15,6 +15,16 @@ EditorBuildSettings:
     path: Assets/level2.unity
     guid: f027ceed1c72b8646b3d836a09c2cb09
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/level3.unity
     guid: 6907842112f2d21489af854675ffc482
+=======
+<<<<<<< HEAD
+    path: Assets/GameOver.unity
+    guid: 0a6cfbafb4bc74bacb92934cf7594bec
+=======
+    path: Assets/level3.unity
+    guid: 6907842112f2d21489af854675ffc482
+>>>>>>> master
+>>>>>>> Riddle
   m_configObjects: {}
