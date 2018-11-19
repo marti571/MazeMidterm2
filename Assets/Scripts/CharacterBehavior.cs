@@ -6,26 +6,47 @@ using UnityEngine;
 public class CharacterBehavior : MonoBehaviour {
 	private Animator anim;
 	private bool PlayerClicked;
-	//the damage to inflict on Minion
-	public int damagePerPunch = 25;
+    public AudioClip punch;
+    AudioSource punchSound;
+    GameObject obj1;
+    public AudioClip kick;
+    AudioSource kickSound;
+    GameObject obj2;
+    //the damage to inflict on Minion
+    public int damagePerPunch = 25;
 	public int damagePerKick = 30;
 	public float timeBetweenHits = 0.15f;
 	float timer;
 	//minion parameters
 	MinionHealth minionHealth;
 	bool minionInRange;
-	GameObject minion;
+	public GameObject minion;
 	//pause control parameters
 	private int count;
 	public bool paused;
 	GameObject[] pausedObjects;
 	// Use this for initialization
 	void Start () {
-		Time.timeScale = 1;
+        obj1 = GameObject.Find("PunchAudioObj");
+        obj2 = GameObject.Find("KickAudioObj");
+        if (obj1 != null)
+        {
+            punchSound = obj1.GetComponent<AudioSource>(); // get component once @ Start more efficient.
+
+        }
+        if (obj2 != null)
+        {
+            kickSound = obj2.GetComponent<AudioSource>(); // get component once @ Start more efficient.
+
+        }
+        Time.timeScale = 1;
 		pausedObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
 		hidePaused();
-		minion = GameObject.FindGameObjectWithTag ("Minion");	
-		minionHealth = minion.GetComponent <MinionHealth> ();
+        if (minion.activeInHierarchy == true)
+        {
+            minion = GameObject.FindGameObjectWithTag("Minion");
+            minionHealth = minion.GetComponent<MinionHealth>();
+        }
 		anim = GetComponent<Animator> ();
 	} 
 	
@@ -87,7 +108,9 @@ public class CharacterBehavior : MonoBehaviour {
 		}
 		if(Input.GetButtonUp("Fire1") && PlayerClicked == true)
 		{
-			anim.SetTrigger("Punch");
+            punchSound.clip = punch; //once the character punch, makes sound
+            punchSound.Play();
+            anim.SetTrigger("Punch");
 			if(minionInRange)
 			{
 				Punch();
@@ -104,7 +127,10 @@ public class CharacterBehavior : MonoBehaviour {
 		}
 		if(Input.GetKeyUp("space") && PlayerClicked == true)
 		{
-			anim.SetTrigger("Kick");
+            kickSound.clip = kick; //once the character kicks, makes sound
+            kickSound.Play();
+
+            anim.SetTrigger("Kick");
 			if(minionInRange)
 			{
 				Kick();

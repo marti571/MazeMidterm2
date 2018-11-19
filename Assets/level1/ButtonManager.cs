@@ -9,4 +9,12 @@ public class ButtonManager : MonoBehaviour {
     {
         SceneManager.LoadScene(gameLevel);
     }
+    public void QuitGameBtn()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
 }

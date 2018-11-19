@@ -2,6 +2,7 @@
 //using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 //using UnityEngine.CoreModule;
 
 
@@ -80,5 +81,6 @@ public class WarriorHealth : MonoBehaviour {
 
 		//stop the charcter from moving or punching
 		characterBehavior.enabled = false;
+        SceneManager.LoadScene("GameOver");
 	}
 }

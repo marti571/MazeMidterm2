@@ -11,7 +11,7 @@ public class GameManagerScript : MonoBehaviour {
 
     public GameObject door;
     public GameObject winText;
-    public float resetDelay;
+   
 
 
     // Use this for initialization
@@ -34,17 +34,9 @@ public class GameManagerScript : MonoBehaviour {
         }
         else if(cur_coins <= 0)
         {
-            //door.SetActive(true);
-            winText.SetActive(true);
-            Time.timeScale = 0f;
-            Invoke("Reset",resetDelay);
-
-
+            door.SetActive(true);
+         
         }
     }
-    public void Reset()
-    {
-        Time.timeScale = 0f;
-        SceneManager.LoadScene("Menu");
-    }
+  
 }
